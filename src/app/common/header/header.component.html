@@ -1,0 +1,78 @@
+ <!------------------------------------------------HEADER-->
+
+  <!-------------------------LOGO-->
+  <a href="index.html"><img src="assets/images/logo.png" alt="" class="header__logo"></a>
+
+  <!-------------------------NAVIGATION-->
+  <div class="header__nav">
+      <ul class="header__nav--list">
+          <li class="header__nav--item">
+              <a routerLink="/home" routerLinkActive="active" class="header__nav--link">Home</a>
+          </li>
+
+          <li class="header__nav--item">
+              <a routerLink="/about" routerLinkActive="active" class="header__nav--link">About</a>
+          </li>
+
+          <li class="header__nav--item">
+              <a href="platform.html" routerLinkActive="active" class="header__nav--link">Platform</a>
+          </li>
+
+          <!-- <li class="header__nav--item">
+              <a href="#" class="header__nav--link">Plans</a>
+          </li>
+
+          <li class="header__nav--item">
+              <a href="#" class="header__nav--link">News</a>
+          </li> -->
+
+          <li class="header__nav--item">
+              <a  routerLink="contact" routerLinkActive="active" class="header__nav--link">Contact</a>
+          </li>
+      </ul>
+  </div>
+
+  <!-------------------------USER SECTION-->
+  <div class="header__user">
+      <!--------Search-->
+      <div class="search">
+          <a href="https://www.linkedin.com/company/coral/" class="linkedin linkedin-header" target="_blank">
+              <svg>
+                  <use xlink:href="assets/images/sprite.svg#icon-linkedin"></use>
+              </svg>
+          </a>
+      </div>
+      <div class="line"></div>
+      <!--------Login Area-->
+      <div class="login-home">
+          <a href="login.html" class="btn btn-primary">
+              <svg>
+                  <use xlink:href="assets/images/sprite.svg#icon-user"></use>
+              </svg>
+              Login</a>
+      </div>
+  </div>
+
+  <!------------------------------------------------Responsive Navigation-->
+  <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+      <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <div class="navigation__nav">
+          <ul class="navigation__list">
+              <li class="navigation__item"><a href="index.html" class="navigation__link"><span>01</span>Home</a>
+              </li>
+              <li class="navigation__item"><a href="about.html" class="navigation__link"><span>02</span>About</a>
+              </li>
+              <li class="navigation__item"><a href="platform.html"
+                      class="navigation__link"><span>03</span>Platform</a></li>
+              <li class="navigation__item"><a href="contact.html"
+                      class="navigation__link"><span>04</span>Contact</a></li>
+          </ul>
+      </div>
+  </div>

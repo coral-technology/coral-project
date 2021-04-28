@@ -1,0 +1,17 @@
+<div class='top'></div>
+
+
+<div [@routerAnimation]="getRouteAnimation(router)">
+  <router-outlet #router="outlet"></router-outlet>
+</div>
+
+
+
+ <!--------------------------SCROLL TO TOP-------->
+ <div class='scrolltop'>
+  <div class='scroll icon'>
+      <svg>
+          <use xlink:href="assets/images/sprite.svg#icon-rocket"></use>
+      </svg>
+  </div>
+</div>

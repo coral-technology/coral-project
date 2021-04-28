@@ -1,0 +1,357 @@
+.header {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 0.4fr;
+    gap: 3rem;
+    align-items: center;
+    z-index: 99;
+    padding: 0 10rem;
+    transition: all 0.4s ease;
+    @include responsive(tab-land) {
+        padding: 0 6rem;
+    }
+
+    @include responsive(tab-port) {
+        padding: 0 5rem;
+        grid-template-columns: 2fr 0.7fr 0.1fr;
+        top: 0;
+        height: 6rem;
+        z-index: 9999;
+        gap: 0;
+        // background-color: rgba($black,0.8);
+        &__logo {
+            height: 3rem;
+        }
+    }
+
+    @include responsive(phone) {
+        padding: 0 3rem;
+        grid-template-columns: 0.5fr 0.6fr 0.2fr;
+        gap: 0;
+    }
+    //---------------------------------------Logo
+    &__logo {
+        height: 4.5rem;
+        @include responsive(tab-port) {
+            height: 3rem;
+        }
+
+        @include responsive(phone) {
+            height: 2.5rem;
+        }
+    }
+    //----------------------------------Navigation
+    &__nav {
+        padding-top: 0.5rem;
+        &--list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+
+        &--item {
+            padding: 0 1rem 1rem;
+        }
+
+        &--link {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: $black;
+            font-weight: 400;
+            position: relative;
+            transition: all 0.5 ease;
+
+            &:hover,
+            &.active {
+                color: $color-primary;
+
+                &::after {
+                    @include after-before;
+                    top: 2rem;
+                    border-bottom: 4px solid $color-primary;
+                    transition: all 0.5 ease;
+                }
+            }
+        }
+
+        @include responsive(tab-port) {
+            display: none;
+        }
+    }
+
+    //------------------------------User Right Section
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .line {
+            background-color: $black;
+            width: 1px;
+            height: 2rem;
+        }
+        .search {
+            &__icon {
+                @include center-el;
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                    fill: $white;
+                    transition: all 0.4s ease;
+                }
+                &:hover {
+                    svg {
+                        fill: $color-primary;
+                    }
+                }
+            }
+
+            .linkedin {
+                border: 1px solid #3b5998;
+                background-color: #3b5998;
+                svg {
+                    fill: $white;
+                }
+                &:hover {
+                    box-shadow: $shadow;
+                    margin-top: -2px;
+                }
+            }
+        }
+
+        .login-home {
+            .btn {
+                padding: 1rem 2rem;
+                svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    fill: $white;
+                    margin-bottom: -0.2rem;
+                }
+                @include responsive(phone) {
+                    padding: 0.7rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+.header.fixed {
+    position: fixed;
+    animation: headerFromTop 0.4s ease;
+    background-color: rgba($off-white, 0.95);
+    top: 0;
+    z-index: 199;
+    height: 6rem;
+    // box-shadow: $shadow;
+    border-bottom: 1px solid $color-grey-light;
+    grid-template-columns: 1.1fr 0.7fr 0.4fr;
+    @include responsive(tab-port) {
+        grid-template-columns: 2fr 0.7fr 0.1fr;
+        gap: 0;
+    }
+
+    @include responsive(phone) {
+        grid-template-columns: 0.5fr 0.6fr 0.2fr;
+        gap: 0;
+    }
+
+    .header__logo {
+        height: 3rem;
+    }
+    .header__nav {
+        padding-top: 0.8rem;
+
+        &--link {
+            color: $black;
+            font-size: 1.4rem;
+            font-weight: 400;
+            &:hover,
+            &.active {
+                color: $color-primary;
+                &::after {
+                    @include after-before;
+                    top: 2.1rem;
+                    border-bottom: 4px solid $color-primary;
+                    transition: all 0.5 ease;
+                }
+            }
+        }
+
+        @include responsive(phone) {
+            display: none;
+        }
+    }
+    .header__user {
+        .line {
+            background-color: $grey;
+            width: 1px;
+            height: 2rem;
+        }
+        .search {
+            .linkedin {
+                &:hover {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .navigation__button {
+        background-color: $off-white;
+        box-shadow: none;
+    }
+    .navigation__icon {
+        &,
+        &::before,
+        &::after {
+            background-color: $color-grey-darker;
+        }
+    }
+}
+.header.inner {
+    position: fixed;
+    animation: headerFromTop 0.4s ease;
+    background-color: rgba($off-white, 0.95);
+    top: 0;
+    z-index: 199;
+    height: 6rem;
+    // box-shadow: $shadow;
+    border-bottom: 1px solid $color-grey-light;
+    grid-template-columns: 1.1fr 0.7fr 0.4fr;
+    @include responsive(tab-port) {
+        grid-template-columns: 2fr 0.7fr 0.1fr;
+        gap: 0;
+    }
+
+    @include responsive(phone) {
+        grid-template-columns: 0.5fr 0.6fr 0.2fr;
+        gap: 0;
+    }
+
+    .header__logo {
+        height: 3rem;
+    }
+    .header__nav {
+        padding-top: 0.8rem;
+
+        &--link {
+            color: $black;
+            font-size: 1.4rem;
+            font-weight: 400;
+            &:hover,
+            &.active {
+                color: $color-primary;
+                &::after {
+                    @include after-before;
+                    top: 2.1rem;
+                    border-bottom: 4px solid $color-primary;
+                    transition: all 0.5 ease;
+                }
+            }
+        }
+
+        @include responsive(phone) {
+            display: none;
+        }
+    }
+    .header__user {
+        .line {
+            background-color: $grey;
+            width: 1px;
+            height: 2rem;
+        }
+        .search {
+            .linkedin {
+                &:hover {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .navigation__button {
+        background-color: $off-white;
+        box-shadow: none;
+    }
+    .navigation__icon {
+        &,
+        &::before,
+        &::after {
+            background-color: $color-grey-darker;
+        }
+    }
+}
+
+.inner-header {
+    margin-top: 6rem;
+    padding: 2rem 10rem 0;
+    border-bottom: 1px solid $color-grey-lighter;
+
+    @include responsive(tab-port) {
+        padding: 2rem 5rem 0;
+      }
+    @include responsive(phone) {
+        padding: 2rem 3rem 0;
+      }
+
+    .head-1 {
+        font-size: 3.4rem;
+        font-weight: 600;
+        color: $black;
+    }
+    .breadcrump {
+        display: flex;
+        margin-left: -1rem;
+        li {
+            position: relative;
+            margin: 0 1rem;
+            &:not(:last-child) {
+                &::after {
+                    content: "/";
+                    position: absolute;
+                    right: 0;
+                    top: -0.3rem;
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    margin: 0 -1.5rem 0 0;
+                    color: $color-grey;
+                }
+            }
+        }
+
+        a {
+            font-size: 1.4rem;
+            font-weight: 300;
+
+
+            display: inline-block;
+            color: $black;
+            position: relative;
+
+            &:hover {
+                color: $color-primary;
+            }
+
+            &.active {
+                color: $color-grey-dark;
+                cursor: text;
+                &:hover {
+                    color: $color-grey-dark;
+                }
+            }
+        }
+    }
+
+    .line {
+        height: 4px;
+        background-color: $color-primary;
+        width: 13rem;
+        margin-top: 2rem;
+    }
+}

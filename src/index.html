@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CoralWeb</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/vendors/slider.css">
+
+  <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+</head>
+<body>
+
+
+
+  <app-root>
+  </app-root>
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <script src="assets/js/main.js"></script>
+     <script src="assets/js/bxslider.js"></script>
+
+     <script>
+         $(document).ready(function () {
+             $('.slider1').bxSlider({
+                 slideWidth: 230,
+                 minSlides: 1,
+                 maxSlides: 5,
+                 slideMargin: 10,
+                 auto: true,
+                 pause: 3000,
+                 speed: 1000,
+                 autoHover: true,
+             });
+         });
+
+     </script>
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+     <script>
+         // AOS.init({
+         //     duration: 1000
+         // });
+
+         AOS.init({
+             offset: 100,
+             duration: 1000,
+             transition: "ease-In-Out",
+             delay: 60,
+         });
+
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.login .form-control {
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid $color-grey-light;
+    border-radius: 0;
+}
+.login .form-group {
+   margin-bottom: 0;
+}
+
+
+
+
+.Register .btn{
+  padding: 1rem 5rem;
+}
+
+.header__logo{
+  height: 4rem;
+}
+
+.login-title{
+  padding: 14rem 0 4rem;
+text-align: center;
+}
+
+.head-4 {
+  color: #121217;
+  font-weight: 400;
+}
+.login-title p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #121217;
+  margin-top: 1rem;
+
+}
+
+.login{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 1rem 10rem;
+
+}
+.head-5{
+  padding-bottom: 3rem;
+}
+.login a{
+   color: lightcoral;
+}
+.link-primary{
+  display: block;
+  text-align: right;
+  font-size: 1.4rem;
+}
+
+.login .btn{
+
+   margin-top: 3rem;
+   padding: 1rem 5rem;
+}
+.btn-center{
+  text-align: center;
+}
+.login__rocket{
+  overflow: hidden;
+}
+.login__rocket .login__img{
+  position: absolute;
+  Right:0;
+  Bottom: -2rem;
+
+}
