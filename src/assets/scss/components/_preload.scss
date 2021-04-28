@@ -1,0 +1,60 @@
+/* ---------Page preload--------------------------------------*/
+
+.loader-wrap {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	background: #fff;
+	top: 0;
+	overflow: hidden;
+	left: 0;
+  transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+}
+.pin-load {
+	position: absolute;
+	top: 50%;
+	left: 55%;
+	width: 200px;
+	height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: -20px;
+	color: #121217;
+	font-family: "Open Sans", sans-serif;
+	text-align: left;
+}
+.pin-load:after {
+	content: "CORAL PLATFORM...";
+	position: absolute;
+	left: -160%;
+	color: #121217;
+}
+.pin-load:before {
+	content: "Loading";
+	position: absolute;
+	overflow: hidden;
+	max-width: 0;
+	text-align: left;
+	animation: pinanim 2.2s ease-out infinite;
+  color: $color-primary;
+}
+@keyframes pinanim {
+	0% {
+		max-width: 0;
+	}
+	100% {
+		max-width: 100%;
+	}
+}
+@keyframes pinanim {
+	0% {
+		max-width: 0;
+	}
+	100% {
+		max-width: 100%;
+	}
+}

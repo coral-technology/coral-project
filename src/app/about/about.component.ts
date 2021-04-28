@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var timeline: any;
+// declare var timeline: any;
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -7,10 +7,16 @@ declare var timeline: any;
 })
 export class AboutComponent implements OnInit {
 
+  loading = true;
   constructor() { }
 
   ngOnInit(): void {
-    timeline.load('timeline', null);
+    this.loading = true;
+    setTimeout(() => {                           //<<<---using ()=> syntax
+      this.loading = false;
+    }, 3000);
+    this.loading = false;
+
   }
 
 }
